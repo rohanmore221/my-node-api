@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
-:root {
+:root,
+[data-theme='dark'] {
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -9,6 +10,21 @@
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --error: #ef4444;
+  --form-bg: rgba(0, 0, 0, 0.2);
+  --card-hover-bg: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --error: #dc2626;
+  --form-bg: rgba(255, 255, 255, 0.8);
+  --card-hover-bg: rgba(255, 255, 255, 0.9);
 }
 
 * {
@@ -81,10 +97,10 @@ body {
 .form-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--form-bg);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  color: white;
+  color: var(--text-main);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -128,8 +144,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.05);
-  color: white;
+  background: var(--glass-bg);
+  color: var(--text-main);
 }
 
 .link-text {
@@ -198,7 +214,7 @@ body {
 }
 
 .note-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1.5rem;
@@ -208,7 +224,7 @@ body {
 }
 
 .note-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--card-hover-bg);
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
@@ -246,8 +262,8 @@ body {
 }
 
 .btn-icon:hover {
-  background: rgba(255,255,255,0.1);
-  color: white;
+  background: var(--card-hover-bg);
+  color: var(--text-main);
 }
 
 .btn-icon.delete:hover {
@@ -256,7 +272,7 @@ body {
 }
 
 .note-form {
-  background: rgba(0,0,0,0.2);
+  background: var(--form-bg);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
