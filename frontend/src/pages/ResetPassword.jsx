@@ -16,7 +16,7 @@ function ResetPassword() {
     setIsLoading(true);
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/auth/resetpassword/${resettoken}`, { password });
+      const response = await axios.put(`https://my-node-api-oe6n.onrender.com/api/auth/resetpassword/${resettoken}`, { password });
       if (response.data.success) {
         toast.success('Password successfully reset! You are now logged in.');
         localStorage.setItem('token', response.data.token);

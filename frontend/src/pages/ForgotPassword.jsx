@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
-const API_URL = 'http://localhost:5000/api/auth/forgotpassword'; 
+const API_URL = 'https://my-node-api-oe6n.onrender.com/api/auth/forgotpassword'; 
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
