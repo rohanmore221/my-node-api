@@ -101,6 +101,12 @@ function Login() {
               </button>
             </div>
 
+            <div style={{ textAlign: 'right', marginTop: '-0.5rem', marginBottom: '1rem' }}>
+              <Link to="/forgotpassword" style={{ color: 'var(--text-muted)', fontSize: '0.85rem', textDecoration: 'none' }}>
+                Forgot Password?
+              </Link>
+            </div>
+
             <button type="submit" className="btn-primary" disabled={isLoading}>
               {isLoading ? 'Signing In...' : 'Sign In'}
             </button>
