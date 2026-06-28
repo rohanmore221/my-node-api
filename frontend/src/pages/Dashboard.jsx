@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const PROFILE_API_URL = 'http://localhost:5000/api/profile';
-const NOTES_API_URL = 'http://localhost:5000/api/notes';
+const PROFILE_API_URL = 'https://my-node-api-oe6n.onrender.com/api/profile';
+const NOTES_API_URL = 'https://my-node-api-oe6n.onrender.com/api/notes';
 
 function Dashboard() {
   const [user, setUser] = useState(null);
