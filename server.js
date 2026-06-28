@@ -22,9 +22,11 @@ mongoose.connect(process.env.MONGODB_URI)
 // Route Files
 const authRoutes = require('./routes/authRoutes');
 const protectedRoutes = require('./routes/protectedRoutes');
+const noteRoutes = require('./routes/noteRoutes');
 
 // Mount Routers
 app.use('/api/auth', authRoutes);
+app.use('/api/notes', noteRoutes);
 app.use('/api', protectedRoutes);
 
 // Add a simple GET route for the browser
